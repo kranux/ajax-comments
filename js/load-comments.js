@@ -28,7 +28,7 @@
         }
 
         function onLoadCommentError(error) {
-            $commentsContainer.append('<div class="alert alert-danger">Problem loading comments.</div>');
+            $commentsContainer.append('<div class="alert alert-danger">Error while loading comments.</div>');
         }
     });
 })(jQuery);
