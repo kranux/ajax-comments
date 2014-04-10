@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog post</title>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- the actual blog post: title/author/date/content -->
+                <h1>A Simple Blog Template for Bootstrap 3</h1>
+                <hr>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum feugiat dui nec fringilla. Donec sit amet lobortis magna. In aliquet quam nec mi tincidunt aliquam. Sed leo eros, sollicitudin at lectus ullamcorper, tincidunt lobortis nunc. Cras rutrum, erat nec consequat rhoncus, tellus libero dapibus leo, quis tincidunt erat massa sed sapien.</p>
+                <p>Nunc feugiat, nisl vel aliquam tempor, quam nisi faucibus sem, id blandit ipsum odio eget turpis. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus eu elit pharetra, volutpat massa in, tincidunt justo. Nullam congue fringilla elit, sit amet cursus velit aliquam et. Pellentesque pulvinar porta mauris, a gravida massa bibendum ac. Sed placerat leo non ipsum scelerisque fermentum. Nullam feugiat bibendum est, sit amet pellentesque erat condimentum pellentesque.</p>
+                <p> Nullam congue justo arcu. Duis faucibus nisi massa, at semper est ornare nec. Donec eget diam sit amet nibh elementum feugiat. Nam nec odio vel ipsum lobortis imperdiet dictum non nisl. Quisque porttitor molestie urna sed luctus. In rutrum, velit ut iaculis sagittis, metus nibh bibendum mauris, in euismod nulla ante vitae odio. Proin quis nisi tincidunt, consectetur felis a, fringilla elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p>Suspendisse potenti. Cras a vestibulum diam, fermentum facilisis dolor. Vivamus lobortis sagittis massa quis porttitor. Curabitur eget aliquet dolor. Duis sagittis sagittis massa nec viverra. Maecenas congue massa et adipiscing fermentum. Maecenas faucibus consectetur euismod. Ut eget convallis sem.</p>
+                <p>  Suspendisse potenti. Pellentesque nibh magna, lacinia nec semper suscipit, cursus ac libero. In suscipit posuere pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed semper imperdiet massa, eget lacinia ipsum dictum quis. Donec nec lacinia tellus. Fusce non tortor in nisl scelerisque porttitor. Duis dictum augue vitae lorem mollis fringilla.</p>
+                <p>Nunc feugiat, nisl vel aliquam tempor, quam nisi faucibus sem, id blandit ipsum odio eget turpis. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus eu elit pharetra, volutpat massa in, tincidunt justo. Nullam congue fringilla elit, sit amet cursus velit aliquam et. Pellentesque pulvinar porta mauris, a gravida massa bibendum ac. Sed placerat leo non ipsum scelerisque fermentum. Nullam feugiat bibendum est, sit amet pellentesque erat condimentum pellentesque.</p>
+                <p> Nullam congue justo arcu. Duis faucibus nisi massa, at semper est ornare nec. Donec eget diam sit amet nibh elementum feugiat. Nam nec odio vel ipsum lobortis imperdiet dictum non nisl. Quisque porttitor molestie urna sed luctus. In rutrum, velit ut iaculis sagittis, metus nibh bibendum mauris, in euismod nulla ante vitae odio. Proin quis nisi tincidunt, consectetur felis a, fringilla elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+
+
+                <hr>
+
+
+                <h3>Comments</h3>
+                <div class="comments-container container">
+                    <div class="comment row" data-id="-1" data-url="get-comments.php"></div>
+                </div>
+                <!-- the comments -->
+
+                <hr>
+                
+                 <!-- the comment box -->
+                <div class="well">
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        <hr>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="js/load-comments.js"></script>
+
+    <script type="text/template" id="comment-template">
+        <div class="template row comment" data-id="<%- id %>">
+            <div class="col-md-2">
+                <img src="<%- avatar %>" alt="<%- user %>" class="img-responsive avatar">
+            </div>
+            <div class="col-md-9">
+                <h3><%- user %></h3>
+                <p><%- comment %></p>
+            </div>
+        </div>
+    </script>
+  </body>
+</html>
