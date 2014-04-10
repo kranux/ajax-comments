@@ -1,10 +1,10 @@
 (function($) {
     "use strict";
     $(function() {
-        $('<img/>')[0].src = 'img/image_634743.gif';
         var $comment = $('.comment'),
             commentsUrl = $comment.data('url'),
             $commentsContainer = $('.comments-container');
+        $('<img/>')[0].src = 'img/image_634743.gif';
 
         initNextCommentLoader($comment);
 
