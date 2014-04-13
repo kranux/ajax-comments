@@ -67,7 +67,6 @@
                                 options.callback($newElement);
                             }
                         });
-                        console.log('showLoadedElement');
                     }
 
                     $target.waypoint('destroy');
