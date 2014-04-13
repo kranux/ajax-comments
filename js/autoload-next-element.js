@@ -33,7 +33,9 @@
 
                 function done(data) {
                     var parsedData,
-                        $newElement;
+                        $newElement,
+                        $images,
+                        imagesLoadedCount = 0;
                     try {
                         parsedData = $.parseJSON(data);
                     } catch (ex) {
@@ -48,11 +50,26 @@
                     }
                     $newElement = $(template(parsedData));
                     $comment.after($newElement);
-                    $newElement.fadeIn(function() {
-                        if (typeof options.callback === 'function') {
-                            options.callback($newElement);
+                    $images = $newElement.find('img');
+                    $images.load(function() {
+                        imagesLoadedCount += 1;
+                        if (imagesLoadedCount === $images.length) {
+                            showLoadedElement();
                         }
                     });
+                    if ($images.length === 0) {
+                        showLoadedElement();
+                    }
+
+                    function showLoadedElement() {
+                        $newElement.fadeIn(function() {
+                            if (typeof options.callback === 'function') {
+                                options.callback($newElement);
+                            }
+                        });
+                        console.log('showLoadedElement');
+                    }
+
                     $target.waypoint('destroy');
                 }
 
